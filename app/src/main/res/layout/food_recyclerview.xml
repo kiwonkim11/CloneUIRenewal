@@ -56,7 +56,8 @@
         android:id="@+id/txt_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
         android:ellipsize="end"
         android:hint="detail"
         android:maxLines="1"
@@ -125,6 +126,7 @@
         app:layout_constraintTop_toBottomOf="@id/txt_deli" />
 
     <TextView
+        android:id="@+id/txt_minprice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
