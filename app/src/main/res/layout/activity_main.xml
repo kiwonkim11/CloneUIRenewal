@@ -68,7 +68,7 @@
 
             <ImageView
                 android:id="@+id/iv_deli"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="15dp"
                 android:scaleType="centerCrop"
@@ -80,7 +80,7 @@
 
             <ImageView
                 android:id="@+id/iv_store"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_storebtn"
@@ -92,7 +92,7 @@
 
             <ImageView
                 android:id="@+id/iv_pickup"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_pickupbtn"
