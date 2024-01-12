@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeliveryActivity">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_iconbox2"
+            android:layout_margin="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_deli_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/iv_deliad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_deli_ad"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <HorizontalScrollView
+                android:id="@+id/horizon_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@id/iv_deliad"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_btndeli1"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_btn1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/iv_btndeli2"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_btn2"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_btndeli1"
+                        app:layout_constraintStart_toEndOf="@id/iv_btndeli1"
+                        app:layout_constraintTop_toTopOf="@id/iv_btndeli1"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <ImageView
+                        android:id="@+id/iv_btndeli3"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_btn3"
+                        app:layout_constraintTop_toTopOf="@id/iv_btndeli2"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_btndeli2"
+                        app:layout_constraintStart_toEndOf="@id/iv_btndeli2"/>
+
+                    <ImageView
+                        android:id="@+id/iv_btndeli4"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_btn4"
+                        app:layout_constraintTop_toTopOf="@id/iv_btndeli3"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_btndeli3"
+                        app:layout_constraintStart_toEndOf="@id/iv_btndeli3"/>
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_btn5"
+                        app:layout_constraintTop_toTopOf="@id/iv_btndeli4"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_btndeli4"
+                        app:layout_constraintStart_toEndOf="@id/iv_btndeli4"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </HorizontalScrollView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toBottomOf="@id/horizon_scrollview">
+
+                <ImageView
+                    android:id="@+id/iv_menu1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_menu2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu2"
+                    app:layout_constraintTop_toTopOf="@id/iv_menu1"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_menu1"
+                    app:layout_constraintStart_toEndOf="@id/iv_menu1"/>
+
+                <ImageView
+                    android:id="@+id/iv_menu3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu3"
+                    app:layout_constraintTop_toTopOf="@id/iv_menu2"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_menu2"
+                    app:layout_constraintStart_toEndOf="@id/iv_menu2"/>
+
+                <ImageView
+                    android:id="@+id/iv_menu4"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu4"
+                    app:layout_constraintTop_toTopOf="@id/iv_menu3"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_menu3"
+                    app:layout_constraintStart_toEndOf="@id/iv_menu3"/>
+
+                <ImageView
+                    android:id="@+id/iv_menu5"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu5"
+                    app:layout_constraintTop_toTopOf="@id/iv_menu4"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_menu4"
+                    app:layout_constraintStart_toEndOf="@id/iv_menu4"/>
+
+                <ImageView
+                    android:id="@+id/iv_menu6"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu15"
+                    app:layout_constraintTop_toBottomOf="@id/iv_menu1"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/iv_menu7"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu6"
+                    app:layout_constraintTop_toTopOf="@id/iv_menu6"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_menu6"
+                    app:layout_constraintStart_toEndOf="@id/iv_menu6"/>
+
+                <ImageView
+                    android:id="@+id/iv_menu8"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu7"
+                    app:layout_constraintTop_toTopOf="@id/iv_menu7"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_menu7"
+                    app:layout_constraintStart_toEndOf="@id/iv_menu7"/>
+
+                <ImageView
+                    android:id="@+id/iv_menu9"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu8"
+                    app:layout_constraintTop_toTopOf="@id/iv_menu8"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_menu8"
+                    app:layout_constraintStart_toEndOf="@id/iv_menu8"/>
+
+                <ImageView
+                    android:id="@+id/iv_menu10"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu9"
+                    app:layout_constraintTop_toTopOf="@id/iv_menu9"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_menu9"
+                    app:layout_constraintStart_toEndOf="@id/iv_menu9"/>
+
+                <ImageView
+                    android:id="@+id/iv_menu11"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu10"
+                    app:layout_constraintTop_toBottomOf="@id/iv_menu6"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/iv_menu12"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu11"
+                    app:layout_constraintTop_toTopOf="@id/iv_menu11"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_menu11"
+                    app:layout_constraintStart_toEndOf="@id/iv_menu11"/>
+
+                <ImageView
+                    android:id="@+id/iv_menu13"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu12"
+                    app:layout_constraintTop_toTopOf="@id/iv_menu12"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_menu12"
+                    app:layout_constraintStart_toEndOf="@id/iv_menu12"/>
+
+                <ImageView
+                    android:id="@+id/iv_menu14"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu13"
+                    app:layout_constraintTop_toTopOf="@id/iv_menu13"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_menu13"
+                    app:layout_constraintStart_toEndOf="@id/iv_menu13"/>
+
+                <ImageView
+                    android:id="@+id/iv_menu15"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu14"
+                    app:layout_constraintTop_toTopOf="@id/iv_menu14"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_menu14"
+                    app:layout_constraintStart_toEndOf="@id/iv_menu14"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
